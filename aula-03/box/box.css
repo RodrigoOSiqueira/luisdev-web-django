@@ -1,0 +1,11 @@
+#nav-bar {
+    background-color: red;
+}
+#box-1 {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border: 10px;
+    border-style: solid;
+    margin: 10px;
+}

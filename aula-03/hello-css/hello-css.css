@@ -1,0 +1,25 @@
+body {
+    padding: 30px;
+}
+
+hr {
+    height: 1px;
+    background-color: red;
+    border: none;
+}
+
+.my-box {
+    background-color: #e3ecf4ff;
+}
+
+.inner-list {
+    color: red;
+}
+
+#content-box {
+    width: 50%;
+}
+
+.my-box:hover {
+    background-color: blue;
+}
