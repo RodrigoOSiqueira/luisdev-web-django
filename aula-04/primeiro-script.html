@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+    <header></header>
+    <body>
+        <button id="my-button">Clica aqui</button>
+        <br/>
+        <hr/>
+        <img src="https://i.stack.imgur.com/b983w.jpg" id="off" alt="Desligada">
+        <img src="http://i.stack.imgur.com/ybxlO.jpg" id="on" alt="Ligada">
+        <br/>
+        <button id="interruptor" >Interruptor</button>
+        <br/>
+        <hr/>
+        <button id="fetch-user">Busca usuário</button>
+    </body>
+    <script>
+        const myButton = document.getElementById("my-button");
+        const interruptor = document.getElementById("interruptor");
+        const fetchUsers = document.getElementById("fetch-user");
+
+        const off = document.getElementById("off");
+        const on = document.getElementById("on");
+        on.style.display = "none";
+        let controleLampada = 0;
+        
+        function toggleLampada() {
+            if(controleLampada == 0) {
+                controleLampada = 1;
+            }else if(controleLampada == 1) {
+                controleLampada = 0;
+            }
+
+            if(controleLampada == 0) {
+                on.style.display = "none";
+                off.style.display = "block";
+            } else if(controleLampada == 1) {
+                on.style.display = "block";
+                off.style.display = "none";
+            }
+        }
+
+        function buscaUsuarios() {
+            fetch('https://jsonplaceholder.typicode.com/users/')
+                .then((response) => response.json())
+                .then((json) => console.log(json));
+        }
+
+        myButton.addEventListener("click", function() {
+            console.log("Ei, voce me apertou!");
+        })
+
+        interruptor.addEventListener("click", function() {
+            toggleLampada()
+        })
+        fetchUsers.addEventListener("click", buscaUsuarios)
+    </script>
+</html>
