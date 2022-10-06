@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Inserir valor</title>
+    </head>
+    <body>
+        <div id="jogo-de-adivinhar">
+            <h2>Tente adivinhar o número</h2>
+            <p>
+                Selecionamos um número aleatório entre 1 e 100. 
+                Veja se consegue adivinhar em 10 chances ou menos. 
+                Nós lhe diremos se seu palpite está com valor alto ou baixo.
+            </p>
+            <div id="input-container">
+                Insira um palpite: 
+                <input type="text" id="input-tentativa" placeholder="37"/>
+                <button id="botao-enviar-tentativa">Tentar</button> <button id="reset-jogo">Resetar jogo</button>
+            </div>
+            <p id="tentativas-do-usuario"></p>
+            <div id="banner-sucesso">Você acertou!!</div>
+            <div id="banner-erro"></div>
+            <br/>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>

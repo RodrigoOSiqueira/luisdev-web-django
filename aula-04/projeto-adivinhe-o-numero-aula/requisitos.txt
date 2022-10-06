@@ -1,0 +1,9 @@
+1 - Preciso gerar um número inteiro aleatório de 1 a 100;
+2 - Preciso ler o input do usuário sempre que ele clicar no botão;
+    2.1 - Preciso somar uma tentativa;
+    2.2 - Preciso indicar todas as tentativas que o usuário fez;
+3 - Preciso indicar se o número "tentando" é maior ou menor que o número gerado aleatóriamente;
+4 - Se o usuário acertar antes de 10 tentativas eu preciso mostar um mensagem de sucesso!! E liberar um botão para resetar o jogo
+    4.1 - Desabilitar demais botões;
+5 - Se o usuário tentar 10 vezes eu preciso desabilitar os inputs e mostrar o botào de resetar o jogo!
+6 - Ao pressionar o botão de resetar o jogo, tudo deve voltar como quando o usuário abriu a página.

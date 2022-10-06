@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Adivinhe o número</title>
+</head>
+<body>
+    <div id="guess-number-game">
+        <h2>Adivinhe o número</h2>
+        <p>
+            Selecionamos um número aleatório entre 1 e 100. 
+            Veja se consegue adivinhar em 10 chances ou menos. 
+            Nós lhe diremos se seu palpite está com valor alto ou baixo.
+        </p>
+        <div id="guessing-input">
+            Insira seu palpite: <input type="text" value="" placeholder="10"> <button id="try-button">Tentar</button>
+        </div>
+        <div id="previous-try"></div>
+        <br/>
+        <div id="success-message">Você acertou!</div>
+        <div id="error-message">Você errou!</div>
+
+        <div play-again-div>
+            <button id="play-again">Jogar novamente</button>
+        </div>
+        
+
+        <p id="hint"></p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{   
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#guess-number-game {
+    border: solid 1px cadetblue;
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+#guess-number-game>h2{
+    text-align: center;
+}
+#guess-number-game>p{
+    padding: 0 25% 0 25%;
+}
+#guessing-input{
+    padding: 10px 25% 30px 25%;
+}
+
+#success-message{
+    background-color: greenyellow;
+    text-align: center;
+    display: none;
+}
+
+#error-message{
+    background-color: red;
+    text-align: center;
+    display: none;
+}
+
+#hint{
+    display: none;
+}
+
+#previous-try{
+    display: none;
+    text-align: center;
+}
+
+[play-again-div] {
+    text-align: center;
+    display: none;
+}

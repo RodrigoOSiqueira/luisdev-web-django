@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#jogo-de-adivinhar {
+    padding: 10px 25% 40px 25%;
+    border: solid cadetblue 1px;
+}
+
+#banner-sucesso {
+    background-color: greenyellow;
+    display: none;
+}
+
+#banner-erro {
+    background-color: red;
+    display: none;
+}
+
+#reset-jogo {
+    display: none;
+}
