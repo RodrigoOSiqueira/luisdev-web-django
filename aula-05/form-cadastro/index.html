@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./statics/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    
+    <title>Adicionar usuário</title>
+</head>
+<body>
+    <div id="pagina">
+        <div id="info">
+            <h1>Informações</h1>
+            <h3>Comece a jogar OLO</h3>
+            <p>
+                OLO é um jogo feito para ser o contrário do LOL, o estilo não é MOBA o estilo é de ABOM, nada que você conhece sobre MOBA e LOL vai te ajudar aqui!
+            </p>
+
+            <div id="faq">
+                <h2>Quer saber mais?</h2>
+                <div class="faq-item">
+                    <h5>informação super relevante</h5>
+                    <div faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h5>Uma informação super relevante</h5>
+                    <div faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h5>Uma informação super relevante</h5>
+                    <div id="terceiro-conteudo" faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h5>Uma informação super relevante</h5>
+                    <div faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h5>Uma informação super relevante</h5>
+                    <div faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h5>Uma informação super relevante</h5>
+                    <div faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h5>Uma informação super relevante</h5>
+                    <div faq-item-texto>
+                        Ola mundo!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="formulario">
+            <h1>Formulário</h1>
+            <div id="cadastro-usuario">
+                <div id="bloco-nome-usuario" bloco-nome-usuario>
+                    <label for="nome-usuario">Nome usuário: </label>
+                    <input type="text" id="nome-usuario" placeholder="rodrigosiqueira">
+                    <p class="mensagem-erro" id="erro-nome-usuario">Nome de usuário incorreto, insira um nome com ao menos 10 caracteres</p>
+                </div>
+                <br/>
+                <div id="bloco-email" bloco-comum>
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" placeholder="email@email.com">
+                    <p class="mensagem-erro" id="erro-email">Email incorreto, o email deve conter um @ e um .com</p>
+                </div>
+                <br/>
+                <div id="bloco-senha" bloco-comum>
+                    <label for="senha">Senha: </label>
+                    <input type="password" id="senha" placeholder="********">
+                    <p class="mensagem-erro" id="erro-senha">Senha invalida, insira ao menos 10 caracteres</p>
+                </div>
+                <br/>
+                <div id="bloco-confirma-senha" bloco-comum>
+                    <label for="confirma-senha">Senha: </label>
+                    <input type="password" id="confirma-senha" placeholder="********">
+                    <p class="mensagem-erro" id="erro-confirma-senha">Senha inseridas não são iguais</p>
+                </div>
+            </div>
+            <div bloco-comum id="bloco-botao">
+                <button>Enviar</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

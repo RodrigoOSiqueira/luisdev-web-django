@@ -1,0 +1,38 @@
+#pagina{
+    display: flex;
+}
+
+#info{
+    width: 50%;
+    border: solid 1px gray;
+    padding: 50px;
+}
+
+#formulario{
+    width: 50%;
+    border: solid 1px gray;
+    padding: 50px;
+}
+
+#faq {
+    border: solid 1px;
+    padding: 20px;
+}
+
+.faq-item {
+    background-color: lightgrey;
+    border-top: solid 1px gray;
+    margin: 10px;
+    cursor: pointer;
+}
+
+[faq-item-texto], [bloco-comum] {
+    display: none;
+}
+
+.mensagem-erro {
+    color: darkred;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
