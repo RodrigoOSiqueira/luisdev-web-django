@@ -1,0 +1,22 @@
+#botao-enviar {
+    margin: 30px;
+    background-color: lightcoral;
+    border: red solid 1px;
+    color: white;
+    border-radius: 5px;
+}
+
+#botao-enviar:hover {
+    margin: 30px;
+    background-color: white;
+    color: red;
+    border: solid red 1px;
+}
+
+#botao-bootstrap {
+    border: solid black 1px;
+}
+
+.bg-primary {
+    border: solid 2px black !important;
+}

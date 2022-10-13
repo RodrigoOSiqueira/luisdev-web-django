@@ -1,0 +1,13 @@
+#meu-alert {
+    display: none;
+}
+
+.h-custom {
+    height: 500px;
+    object-fit: cover;
+}
+
+.card, #botao-modal {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
