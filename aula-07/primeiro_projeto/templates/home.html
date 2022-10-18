@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <!-- Bloco de texto 1-->
+    <div class="container mt-5 text-center">
+        <div class="mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">{{ titulo_bloco }}</h1>
+                <p class="fs-4">{{ text_bloco }}</p>
+                <a href="{% url 'the-project' %}">
+                    <button class="btn btn-success btn-lg">Saber mais</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Bloco de texto 1-->
+{% endblock %}
