@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Enquetes</li>
+        </ol>
+    </nav>
+    <h1>Lista de Enquetes</h1>
+    {% if erro %}
+        <div class="alert alert-danger" role="alert">
+            {{ erro }}
+        </div>
+    {% endif %}
+
+    <ul>
+        {% for enquete in enquetes %}
+            <a href="{% url 'enquetes:detalhe' enquete.id %}"><li> {{ enquete.texto }} </li></a>
+        {% endfor %}
+    </ul>
+{% endblock %}

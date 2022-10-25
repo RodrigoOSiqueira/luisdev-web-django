@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block conteudo %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'enquetes:lista' %}">Enquetes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ enquete.texto }}</li>
+        </ol>
+    </nav>
+    <h2>{{ enquete.texto }}</h2>
+    <p>{{ enquete.descricao }}</p>
+    {% if erro %}
+        <div class="alert alert-danger" role="alert">
+            {{ erro }}
+        </div>
+    {% endif %}
+    <br/>
+    {% if enquete.imagem %}
+        <img src="{{ enquete.imagem.url }}" class="imagem-enquete">
+    {% else %}
+        <img src="{% static 'imagens/perguntas-perguntas-jpg.webp' %}" class="imagem-enquete">
+    {% endif %}
+    
+    <hr/>
+    <form action="{% url 'enquetes:votar' enquete.id %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            {% for escolha in enquete.escolhas.all %}
+                <input 
+                    type="radio" 
+                    name="escolha_id" 
+                    id="escolha-{{ forloop.counter }}"
+                    value="{{ escolha.id }}"
+                    required
+                >
+                <label for="escolha-{{ forloop.counter }}"> {{ escolha.texto }} </label>
+                <br/>
+            {% endfor %}
+        </fieldset>
+        <br/>
+        <input type="submit" class="btn btn-primary" value="Votar!">
+        <a href="{% url 'enquetes:lista' %}" class="btn btn-secondary">Retornar</a>
+    </form>
+{% endblock %}

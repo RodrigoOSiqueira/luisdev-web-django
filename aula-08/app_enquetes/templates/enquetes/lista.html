@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <h1>Lista de Enquetes</h1>
+
+    <ul>
+        {% for enquete in enquetes %}
+            <a href="{% url 'enquetes:detalhe' enquete.id %}"><li> {{ enquete.texto }} </li></a>
+        {% endfor %}
+    </ul>
+{% endblock %}
