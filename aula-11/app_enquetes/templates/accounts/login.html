@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <h2>Login</h2>
+    <hr/>
+
+    {% if erro %}
+        <div class="alert alert-danger" role="alert">
+            {{ erro }}
+        </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-6">
+            <img 
+                src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2020/09/wordpress-login.jpg" 
+                alt="Imagem tela Login"
+                class="imagem-enquete"
+            >
+        </div>
+        <div class="col-6">
+            <div class="text-center">
+                <img 
+                    src="https://www.ifms.edu.br/imagens/icones-agenda/interrogacao.png/@@images/4201dd79-8751-48ca-945f-92d2c815f7ca.png"
+                    style="width: 120px;" 
+                    alt="logo"
+                >
+                <h4 class="mt-1">Somos o EnquetesFeed</h4>
+            </div>
+            <form action="{% url 'accounts:login' %}" method="post">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="bi bi-person-fill"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" name="username">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="bi bi-unlock-fill"></i>
+                    </span>
+                    <input type="password" class="form-control" placeholder="Senha" aria-label="Username" name="password">
+                </div>
+
+                <input type="submit" value="Entrar" class="btn btn-primary">
+                <a href="{% url 'accounts:criar_usuario' %}">Crie uma conta</a>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

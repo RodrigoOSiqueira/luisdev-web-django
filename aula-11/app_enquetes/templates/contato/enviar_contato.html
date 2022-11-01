@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+<h2>Contato</h2>
+{{ title }}
+<hr/>
+    <form action="{% url 'contatos:contato' %}" method="post">
+        {% csrf_token %}
+        {{form}}
+        <br/>
+        <br/>
+        <div class="text-end">
+            <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+    </form>
+    
+{% endblock %}

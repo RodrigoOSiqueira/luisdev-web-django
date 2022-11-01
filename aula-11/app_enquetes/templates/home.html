@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block conteudo %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+    <h2>{{ titulo }}</h2>
+    <h3>{{ sub_titulo }}</h3>
+    <hr/>
+    <div class="p-5 text-center bg-image rounded-3" id="main-image">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <p>
+        {{ texto_explicativo }}
+    </p>
+    {% if not user.is_authenticated %}
+        <div class="text-center">
+            <a href="{% url 'accounts:login' %}"><button class="btn btn-primary">Entrar</button></a>
+        </div>
+    {% endif %}
+{% endblock %}
